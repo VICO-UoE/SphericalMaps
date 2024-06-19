@@ -1,0 +1,12 @@
+name: sph
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - torchvision
+  - pytorch-cuda=11.7
+  - pytorch=2.0.1
+  - pyyaml
+  - tqdm
+  - python=3.10
