@@ -1,0 +1,28 @@
+data:
+  set: 'FCars'
+  data_path: '/disk/nfs/gazinasvolume1/datasets/freiburg_static_cars'
+  im_size: [448,448]
+  n_cats: 1
+  vp_bins: 8
+
+training:
+  device: 5
+  resume_from_ckpt: ''
+  epochs: 200
+  batch_size: 64
+  learning_rate: 0.001
+  seed: 0
+
+model:
+  backbone: dinov2_vitb14
+  n_triplets: 32
+  rd_margin: 0.5
+  o_thresh: 1
+  rd_strength: 0.3
+  o_strength: 0.3
+  vp_strength: 0.1
+  
+logs:
+  enabled: True
+  base_dir: 'exps/'
+  save_frequency: 10
